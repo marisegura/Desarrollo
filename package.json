@@ -1,0 +1,10 @@
+{
+  "name": "gestor-tareas",
+  "version": "1.0.0",
+  "description": "Gestor de tareas simple en localhost",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "private": true
+}

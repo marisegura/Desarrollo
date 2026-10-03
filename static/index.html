@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mis Tareas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>📝 Mis Tareas</h1>
+  <div class="card">
+    <form id="form">
+      <input type="text" class="text" id="text" placeholder="Nueva tarea..." autocomplete="off" required>
+      <input type="text" class="cat" id="cat" list="cats" placeholder="Categoría" autocomplete="off">
+      <datalist id="cats"></datalist>
+      <input type="date" id="due" title="Fecha límite">
+      <select id="prio" title="Prioridad">
+        <option value="alta">Prioridad alta</option>
+        <option value="media" selected>Prioridad media</option>
+        <option value="baja">Prioridad baja</option>
+      </select>
+      <button class="add" type="submit">Añadir</button>
+    </form>
+
+    <div class="bar">
+      <div class="filters" id="filters">
+        <button data-f="all" class="active">Todas</button>
+        <button data-f="pending">Pendientes</button>
+        <button data-f="done">Hechas</button>
+      </div>
+      <select id="catFilter" title="Filtrar por categoría"></select>
+    </div>
+
+    <ul id="list"></ul>
+    <div class="footer">
+      <span id="count"></span>
+      <button class="clear" id="clear">Borrar hechas</button>
+    </div>
+    <p class="error" id="error" hidden>No se pudo conectar con el servidor.</p>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
