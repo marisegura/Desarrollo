@@ -4,7 +4,10 @@
   "description": "Gestor de tareas simple en localhost",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node --env-file-if-exists=.env server.js"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "private": true
 }
