@@ -37,7 +37,8 @@ const onRequest = (req, res) => {
   }
 };
 
-if (!process.env.SUPABASE_URL || !process.env.SUPABASE_KEY) {
+if (!(process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL) ||
+    !(process.env.SUPABASE_KEY || process.env.VITE_SUPABASE_ANON_KEY)) {
   console.warn('Aviso: faltan SUPABASE_URL y/o SUPABASE_KEY en el archivo .env');
 }
 
